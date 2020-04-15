@@ -11,51 +11,51 @@ Sparkify wants to analyze the data they've been collecting on songs and user act
 
 ## Database schema design and ETL pipeline
 
-### Datasets used: song_data, log_data
+### Datasets used: `song_data`, `log_data`
 
 The star schema includes 1 Fact Table and 4 Dimension Tables. 
 
 ### Fact Table
 
-- *songplays* <br>
+- `songplays` <br>
 songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
 
 ### Dimension Tables
 
-- *users* <br>
+- `users` <br>
 user_id, first_name, last_name, gender, level
 
-- *songs* <br>
+- `songs` <br>
 song_id, title, artist_id, year, duration
 
 - *artists* <br>
 artist_id, name, location, latitude, longitude
 
-- *time* <br>
+- `time` <br>
 start_time, hour, day, week, month, year, weekday
 
 
 ## Files in the repository
 
-- *README.md* <br>
+- `README.md` <br>
 brief intro of the project
 
-- *data* <br>
+- `data` <br>
 folder that contains song and log datasets
 
-- *sql_queries.py* <br>
+- `sql_queries.py` <br>
 contains SQL queries for DROP and CREATE tables, INSERT rows
 
-- *create_tables.py* <br>
+- `create_tables.py` <br>
 creates database sparkifydb, imports sql_queries module to drop and create tables
 
-- *etl.ipynb* <br>
+- `etl.ipynb` <br>
 develops the ETL process on a single file in song_data or log_data database and load into fact or dimension table
 
-- *etl.py* <br>
+- `etl.py` <br>
 develops the ETL process and load the whole song_data and log_data datasets based on etl.ipynb
 
-- *test.ipynd* <br>
+- `test.ipynd` <br>
 test whether tables are created and whether records are added to according table
 
 
@@ -72,7 +72,7 @@ To load whole song_data and log_data datasets into tables <br>
 
 ## Example queries and results
 
-1. Find total number of songs users listened to for the whole time
+- Find total number of songs users listened to for the whole time
 ```sql
 %sql SELECT COUNT(DISTINCT title) AS num_songs \
      FROM songs;
@@ -82,7 +82,7 @@ num_songs
 71
 ```
 
-2. Find number of users by gender
+- Find number of users by gender
 ```sql
 %sql SELECT gender, COUNT(DISTINCT user_id) AS cnt \
      FROM users \
@@ -94,7 +94,7 @@ F        55
 M        41
 ```
 
-3. Find first name, last name, and gender of Top 5 users who have the highest number of song played times
+- Find first name, last name, and gender of Top 5 users who have the highest number of song played times
 ```sql
 %sql SELECT t2.first_name, t2.last_name, t2.gender, t1.cnt \
      FROM \
