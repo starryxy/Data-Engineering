@@ -1,4 +1,4 @@
-# Sparkify: Data Warehouse on AWS Project <br>
+# Sparkify: Data Warehouse on AWS Project
 
 ## Summary
 
@@ -6,7 +6,6 @@ Sparkify wants to analyze the data they've been collecting on songs and user act
 
 **Task**: build an ETL pipeline that extracts their data from S3, stages them in Redshift, and transforms data into a set of dimensional tables
 
-<br>
 
 ## Database Schema
 
@@ -37,7 +36,6 @@ artist_id, name, location, latitude, longitude
 - `time` <br>
 start_time, hour, day, week, month, year, weekday
 
-<br>
 
 ## Files in Repository
 
@@ -52,7 +50,6 @@ script to drop old tables if exist and create new tables in Redshift
 - `etl.py` <br>
 script to extract JSON data from the S3 bucket, load data to staging tables, transform data and load into fact and dimension tables on Redshift
 
-<br>
 
 ## How to Run
 
@@ -93,14 +90,13 @@ SECRET_KEY = [your_secret_key]
     `run etl.py`
 
 4. Remember to delete the Redshift Cluster you created when you finished to avoid unnecessary cost
-    
-<br>
+
 
 ## Query Example
 
 Once you've created the Redshift database and run the ETL pipeline, you can test out some queries in Redshift console query editor.
 
--- Find total number of songs users listened to for the whole time
+- Find total number of songs users listened to for the whole time
 ```sql
 SELECT COUNT(DISTINCT title) AS num_songs 
 FROM songs;
@@ -110,7 +106,7 @@ num_songs
 14402
 ```
 
--- Find number of users by gender
+- Find number of users by gender
 ```sql
 SELECT gender, COUNT(DISTINCT user_id) AS cnt 
 FROM users 
@@ -122,7 +118,7 @@ F        55
 M        41
 ```
 
---Top artists by number of song plays
+- Top artists by number of song plays
 ```sql
 SELECT a.name, count(a.name) AS num_songplays
 FROM songplays s
