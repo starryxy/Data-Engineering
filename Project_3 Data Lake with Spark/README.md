@@ -9,11 +9,12 @@ Sparkify wants to analyze the data they've been collecting on songs and user act
 
 ## Database Schema
 
-**Datasets & Location**: <br>
+**Datasets & Location**:
+
 Song data: `s3://udacity-dend/song_data` <br>
 Log data: `s3://udacity-dend/log_data` <br>
 
-
+  \
 The star schema includes 1 Fact Table and 4 Dimension Tables. 
 
 **Fact Table**
