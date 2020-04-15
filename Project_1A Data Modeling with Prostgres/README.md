@@ -11,16 +11,18 @@ Sparkify wants to analyze the data they've been collecting on songs and user act
 
 ## Database schema design and ETL pipeline
 
-### Datasets used: `song_data`, `log_data`
+#### Datasets used: `song_data`, `log_data`
 
 The star schema includes 1 Fact Table and 4 Dimension Tables. 
 
-### Fact Table
+<br> 
+
+#### Fact Table
 
 - `songplays` <br>
 songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
 
-### Dimension Tables
+#### Dimension Tables
 
 - `users` <br>
 user_id, first_name, last_name, gender, level
@@ -28,7 +30,7 @@ user_id, first_name, last_name, gender, level
 - `songs` <br>
 song_id, title, artist_id, year, duration
 
-- *artists* <br>
+- `artists` <br>
 artist_id, name, location, latitude, longitude
 
 - `time` <br>
