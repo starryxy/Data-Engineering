@@ -1,6 +1,6 @@
 # Data Engineering Projects
 
-
+<br>
 This repo contains 6 projects for Udacity's Data Engineering Nanodegree: 
 
 <br>
