@@ -4,7 +4,6 @@
 This repo contains 6 projects for Udacity's Data Engineering Nanodegree: 
 
 <br>
-<br>
 
 - ### [Data Modeling with Postgres](https://github.com/starryxy/Data-Engineering/tree/master/Project_1A%20Data%20Modeling%20with%20Prostgres)
 Create a star schema and ETL pipeline with Postgres
