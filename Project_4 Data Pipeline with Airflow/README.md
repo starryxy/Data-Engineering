@@ -55,11 +55,11 @@ script with the DAG, tasks, and task dependencies that can copy song and log dat
 - `create_tables.sql` <br>
 contain SQL queries to drop old staging, fact, and dimension tables if exist and create new ones in Redshift
 
-/helpers
+/plugins/helpers
 - `sql_queries.py` <br>
 contain SQL queries to transform and insert data into fact and dimension tables
 
-/operators
+/plugins/operators
 - `stage_redshift.py` <br>
 script to create `StageToRedshiftOperator` that loads JSON formatted files from S3 to staging tables in Amazon Redshift
 - `load_fact.py` <br>
