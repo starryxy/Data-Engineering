@@ -20,7 +20,7 @@ Built an ETL pipeline for a data lake by extracting data from S3, processing the
 - ### [Data Pipelines with Airflow](https://github.com/starryxy/Data-Engineering/tree/master/Project_4%20Data%20Pipeline%20with%20Airflow)
 Created and automated a data pipeline with DAG which has custom operators to perform tasks that can stage the data, transform the data in data warehouse, and run checks on data quality
 
-- ### [Capstone project: YouTube Trending Videos ETL Pipeline](https://github.com/starryxy/Data-Engineering/tree/master/Project_5%20YouTube%20Trending%20Videos%20ETL%20Pipeline%20)
+- ### [Capstone Project: YouTube Trending Videos ETL Pipeline](https://github.com/starryxy/Data-Engineering/tree/master/Project_5%20YouTube%20Trending%20Videos%20ETL%20Pipeline%20)
 An ETL data pipeline that can extract data from S3 to data warehouse in Redshift, transform the data in data warehouse, run checks on data quality, compute results for analytical questions, and run checks on final results
 
 <br>
