@@ -87,7 +87,7 @@ contain SQL queries to transform and insert data into fact, dimension, analytica
 - `stage_redshift.py` <br>
 script to create `StageToRedshiftOperator` that loads JSON formatted files from S3 to staging tables in Amazon Redshift
 - `load_table.py` <br>
-script to create `LoadTableOperator` that transforms data in staging tables and inserts into fact, dimension, analytical tables in Amazon Redshift; tables are emptied before inserting data
+script to create `LoadTableOperator` that transforms data in staging tables and inserts into fact, dimension, analytical tables in Amazon Redshift; tables are emptied (`TRUNCATE`) before inserting data
 - `data_quality.py` <br>
 script to create `DataQualityOperator` that checks if staging, fact, dimension, analytical tables contain at least 1 row of data
 
@@ -170,8 +170,10 @@ Port: 5439
 ## Scenarios
 
 - Data increased by 100x
+  - Extract data from YouTube Data API, and pipe it into zlib to gzip it before feeding to S3 to avoid storing data to ETL server and reduce disk IO
   - Scale both the size and number of nodes in Redshift cluster
-  - Some tweaks may also need to be made, e.g. setting the distribution style of `videos` and `channels` dimension tables to Key distribution, and setting `category` and `country` dimension tables to All distribution may reduce the amount of data shuffling and improve query run time performance
+  - Compress and split files in parts to enable Redshift to use it’s computing resources across the cluster to do the copy in parallel which can save storage space on ETL server and lead to faster loads
+  - Add distribution key, e.g. setting the distribution style of `videos` and `channels` dimension tables to `Key` distribution, and setting `category` and `country` dimension tables to `All` distribution can help reduce the amount of data shuffling and improve query run time performance
 
 - Database needs to be accessed by 100+ people
   - Redshift should have no problem handling 100+ database users with auto-scaling capabilities and good read performance
