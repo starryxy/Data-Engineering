@@ -15,13 +15,13 @@ default_args = {
     # SLA: each task in the DAG needs to complete within 1 hr
     'sla':timedelta(hours=1),
     # On failure, tasks are retried 3 times
-    'retries': 1,
+    'retries': 3,
     # Retries happen every 5 minutes
-    'retry_delay': timedelta(minutes=1),
+    'retry_delay': timedelta(minutes=5),
     # Do not email on retry
     'email_on_retry': False,
-    # 'email_on_failure': True,
-    'email_on_failure': False,
+    'email_on_failure': True,
+    # 'email_on_failure': False,
     'email': ['starryxy311@gmail.com']
 }
 
@@ -29,9 +29,9 @@ dag = DAG('youtube_trending_videos_etl_dag',
           default_args=default_args,
           description='Full ETL pipeline combining trending YouTube videos and channels data',
           # daily
-          # schedule_interval='@daily'
+          schedule_interval='@daily'
           # once
-          schedule_interval='@once',
+          # schedule_interval='@once',
           # Turn off catchup
           catchup=False
         )
