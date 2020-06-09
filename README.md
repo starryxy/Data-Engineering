@@ -1,7 +1,7 @@
-# Data Engineering Projects
+# Data Engineering Exercises & Projects
 
 <br>
-This repo contains 6 projects for Udacity's Data Engineering Nanodegree: 
+This repo contains all exercises and 6 projects for Udacity's Data Engineering Nanodegree: 
 
 <br>
 
