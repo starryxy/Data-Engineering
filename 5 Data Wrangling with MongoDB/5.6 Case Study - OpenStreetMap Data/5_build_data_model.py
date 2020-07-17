@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
+https://wiki.openstreetmap.org/wiki/OSM_XML
+https://wiki.openstreetmap.org/wiki/Elements
+
 Your task is to wrangle the data and transform the shape of the data
 into a data model. The output should be a list of dictionaries that look like this:
 
