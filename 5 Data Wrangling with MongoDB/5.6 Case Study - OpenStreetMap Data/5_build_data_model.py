@@ -71,6 +71,7 @@ In particular the following things should be done:
 should be turned into
 "node_refs": ["305896090", "1719825889"]
 """
+
 import xml.etree.cElementTree as ET
 from pprint import pprint
 import re
@@ -151,6 +152,7 @@ def process_map(file_in, pretty = False):
                     fo.write(json.dumps(el) + "\n")
     return data
 
+
 def test():
     # NOTE: if you are running this code on your computer to write to a JSON file, 
     # call the process_map procedure with pretty=False. Otherwise, mongoimport
@@ -180,6 +182,7 @@ def test():
                                       }
     assert data[-1]["node_refs"] == [ "2199822281", "2199822390",  "2199822392", "2199822369",
                                     "2199822370", "2199822284", "2199822281"]
+
 
 if __name__ == "__main__":
     test()
