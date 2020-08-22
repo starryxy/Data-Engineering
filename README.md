@@ -1,26 +1,26 @@
 # Data Engineering Exercises & Projects
 
 <br>
-This repo contains all exercises and 6 projects for Udacity's Data Engineering Nanodegree: 
+This repo contains all exercises and 6 projects for Udacity's Data Engineering Nanodegree:
 
 <br>
 
-- ### [Data Modeling with Postgres](https://github.com/starryxy/Data-Engineering/tree/master/Project_1A%20Data%20Modeling%20with%20Prostgres)
+- ### [Data Modeling with Postgres](Project_1A%20Data%20Modeling%20with%20Prostgres)
 Created a star schema and ETL pipeline with Postgres
 
-- ### [Data Modeling with Apache Cassandra](https://github.com/starryxy/Data-Engineering/tree/master/Project_1B%20Data%20Modeling%20with%20Apache%20Cassandra)
+- ### [Data Modeling with Apache Cassandra](Project_1B%20Data%20Modeling%20with%20Apache%20Cassandra)
 Created an Apache Cassandra database
 
-- ### [Data Warehouse on AWS](https://github.com/starryxy/Data-Engineering/tree/master/Project_2%20Data%20Warehouse%20on%20AWS)
+- ### [Data Warehouse on AWS](Project_2%20Data%20Warehouse%20on%20AWS)
 Built an ETL pipeline that extracts songs and user activity data from S3, stages them in Redshift, and transforms data into fact and dimension tables
 
-- ### [Data Lake with Spark](https://github.com/starryxy/Data-Engineering/tree/master/Project_3%20Data%20Lake%20with%20Spark)
+- ### [Data Lake with Spark](Project_3%20Data%20Lake%20with%20Spark)
 Built an ETL pipeline for a data lake by extracting data from S3, processing them into analytics tables using Spark, and loading them back into S3 as a set of dimensional tables in partitioned parquet files
 
-- ### [Data Pipelines with Airflow](https://github.com/starryxy/Data-Engineering/tree/master/Project_4%20Data%20Pipeline%20with%20Airflow)
+- ### [Data Pipelines with Airflow](Project_4%20Data%20Pipeline%20with%20Airflow)
 Created and automated a data pipeline with DAG which has custom operators to perform tasks that can stage the data, transform the data in data warehouse, and run checks on data quality
 
-- ### [Capstone Project: YouTube Trending Videos ETL Pipeline](https://github.com/starryxy/Data-Engineering/tree/master/Project_5%20YouTube%20Trending%20Videos%20ETL%20Pipeline%20)
+- ### [Capstone Project: YouTube Trending Videos ETL Pipeline](Project_5%20YouTube%20Trending%20Videos%20ETL%20Pipeline%20)
 An ETL data pipeline that can extract data from S3 to data warehouse in Redshift, transform the data in data warehouse, run checks on data quality, compute results for analytical questions, and run checks on final results
 
 <br>
